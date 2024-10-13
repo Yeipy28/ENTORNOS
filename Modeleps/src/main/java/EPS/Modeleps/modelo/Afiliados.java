@@ -21,9 +21,12 @@ public class Afiliados {
     
     @Column(name = "nombre", nullable = false)
     private String nombre;
+
+    @Column(name = "tipo_identificacion")
+    private String tipo_identificacion;
     
     @Column(name = "numero_identificacion", nullable = false, unique = true)
-    private Integer numero_identificacion;
+    private String numero_identificacion;
     
     @Temporal(TemporalType.DATE)
     @Column(name = "fecha_nacimiento")
@@ -57,6 +60,24 @@ public class Afiliados {
         return id_afiliado;
     }
 
+    public Afiliados(Long id_afiliado, String nombre, String tipo_identificacion, String numero_identificacion,
+            Date fecha_nacimiento, String sexo, String direccion, String telefono, String email, Date fecha_afiliacion,
+            String plan_salud, String estado_afiliacion) {
+        this.id_afiliado = id_afiliado;
+        this.nombre = nombre;
+        this.tipo_identificacion = tipo_identificacion;
+        this.numero_identificacion = numero_identificacion;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.sexo = sexo;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.email = email;
+        this.fecha_afiliacion = fecha_afiliacion;
+        this.plan_salud = plan_salud;
+        this.estado_afiliacion = estado_afiliacion;
+    }
+    public Afiliados() {
+    }
     public void setId_afiliado(Long id_afiliado) {
         this.id_afiliado = id_afiliado;
     }
@@ -69,11 +90,11 @@ public class Afiliados {
         this.nombre = nombre;
     }
 
-    public Integer getNumero_identificacion() {
+    public String getNumero_identificacion() {
         return numero_identificacion;
     }
 
-    public void setNumero_identificacion(Integer numero_identificacion) {
+    public void setNumero_identificacion(String numero_identificacion) {
         this.numero_identificacion = numero_identificacion;
     }
 
@@ -139,6 +160,12 @@ public class Afiliados {
 
     public void setEstado_afiliacion(String estado_afiliacion) {
         this.estado_afiliacion = estado_afiliacion;
+    }
+    public String getTipo_identificacion() {
+        return tipo_identificacion;
+    }
+    public void setTipo_identificacion(String tipo_identificacion) {
+        this.tipo_identificacion = tipo_identificacion;
     }
 }
 

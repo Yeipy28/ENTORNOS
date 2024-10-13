@@ -19,6 +19,7 @@ public class CitasMedicas {
 
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(name = "id_cita")
 private Long id_cita;
 
 @ManyToOne
@@ -26,14 +27,14 @@ private Long id_cita;
 private Afiliados id_afiliado;
 
 @ManyToOne
-    @JoinColumn(name="id_ips")
-    private Ips id_ips;
+@JoinColumn(name="id_ips")
+private Ips id_ips;
 
-    @ManyToOne
-    @JoinColumn(name="id")
-    private Medico id;
+@ManyToOne
+@JoinColumn(name="medico_id")
+private Medico medico_id;
 
-    @Temporal(TemporalType.DATE)
+@Temporal(TemporalType.DATE)
 @Column(name = "fecha_cita")
 private Date fecha_cita;
 
@@ -47,12 +48,12 @@ private String especialidad;
 @Column(name = "estado_cita")
 private String estado_cita;
 
-public CitasMedicas(Long id_cita, Afiliados id_afiliado, Ips id_ips, Medico id, Date fecha_cita, Date hora_cita,
+public CitasMedicas(Long id_cita, Afiliados id_afiliado, Ips id_ips, Medico medico_id, Date fecha_cita, Date hora_cita,
         String especialidad, String estado_cita) {
     this.id_cita = id_cita;
     this.id_afiliado = id_afiliado;
     this.id_ips = id_ips;
-    this.id = id;
+    this.medico_id = medico_id;
     this.fecha_cita = fecha_cita;
     this.hora_cita = hora_cita;
     this.especialidad = especialidad;
@@ -87,11 +88,11 @@ public void setId_ips(Ips id_ips) {
 }
 
 public Medico getId() {
-    return id;
+    return medico_id;
 }
 
-public void setId(Medico id) {
-    this.id = id;
+public void setId(Medico medico_id) {
+    this.medico_id = medico_id;
 }
 
 public Date getFecha_cita() {

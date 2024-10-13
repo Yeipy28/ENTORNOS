@@ -29,10 +29,10 @@ public class Autorizacion {
     @Column(name = "fecha_solicitud")
     private Date fecha_solicitud;
 
-    @Column(name = "estado_autorizado", nullable = false)
+    @Column(name = "estado_autorizacion")
     private String estado_autorizado;
     
-    @Column(name = "motivo_solicitud", nullable = false )
+    @Column(name = "motivo_solicitud")
     private String motivo_solicitud;
 
 
