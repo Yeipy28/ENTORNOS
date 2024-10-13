@@ -27,7 +27,7 @@ public class Facturacion {
 
     @ManyToOne
     @JoinColumn(name="id_ips")
-    private Afiliados id_ips;
+    private Ips id_ips;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "fecha_emision")
@@ -42,7 +42,7 @@ public class Facturacion {
     @Column(name = "estado_factura")
     private String estado_factura;
 
-    public Facturacion(Long id_factura, Afiliados id_afiliado, Afiliados id_ips, Date fecha_emision,
+    public Facturacion(Long id_factura, Afiliados id_afiliado, Ips id_ips, Date fecha_emision,
             String servicios_prestados, long monto_total, String estado_factura) {
         this.id_factura = id_factura;
         this.id_afiliado = id_afiliado;
@@ -72,11 +72,11 @@ public class Facturacion {
         this.id_afiliado = id_afiliado;
     }
 
-    public Afiliados getId_ips() {
+    public Ips getId_ips() {
         return id_ips;
     }
 
-    public void setId_ips(Afiliados id_ips) {
+    public void setId_ips(Ips id_ips) {
         this.id_ips = id_ips;
     }
 
