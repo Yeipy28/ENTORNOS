@@ -5,4 +5,5 @@ integrantes:
 - Johan sebastian Villamizar Ortega - 2162643
 - Oscar Julian Rey Jaimes - 2202032
 # DIAGRAMA ENTIDAD-RELACION
-![Captura](https://github.com/user-attachments/assets/c9bfac4a-2bde-4f13-82b2-8b930fcbb01e)
+![image](https://github.com/user-attachments/assets/6627d434-5bdc-4dd9-9ae3-26ecfaa02f2c)
+
