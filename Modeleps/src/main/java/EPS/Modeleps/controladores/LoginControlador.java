@@ -49,7 +49,7 @@ public class LoginControlador {
         Login obj = loginServicio.buscarLogin(login.getId_login());
         if(obj != null){
             obj.setCedula(login.getCedula());
-            obj.setContraseña(login.getContraseña());
+            obj.setContrasena(login.getContrasena());
             loginServicio.nuevoLogin(obj);
         }else {
             return new ResponseEntity<>(obj, HttpStatus.INTERNAL_SERVER_ERROR);

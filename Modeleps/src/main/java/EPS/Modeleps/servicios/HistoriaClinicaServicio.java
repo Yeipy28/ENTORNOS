@@ -2,7 +2,6 @@ package EPS.Modeleps.servicios;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import EPS.Modeleps.modelo.HistoriaClinica;
 import EPS.Modeleps.repositorios.HistoriaClinicaRepositorio;
